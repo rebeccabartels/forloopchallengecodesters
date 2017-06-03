@@ -1,3 +1,5 @@
+#wrong code: 
+
 stage.set_background("drawbridge")
 sprite = codesters.Sprite("dragon", 0, -75)
 #variables 
@@ -24,3 +26,25 @@ for letter in secret_letters: #creating forloop
     secret_letters.append(astring)
     sprite.say(revealed_letters)
     revealed_letters += letter
+    
+    
+    
+    #Right code:
+
+stage.set_background("drawbridge")
+sprite = codesters.Sprite("dragon", 0, -75)
+
+word = "python"
+secret_letters = list(word)
+sprite.say("Guess my word and you can cross!")
+stage.wait(2)
+sprite.say("After each letter you can guess! But don't take too long!") 
+stage.wait(2)
+revealed_letters = ""
+
+for letter in secret_letters:
+    sprite.say("None shall pass without the secret word.")
+    stage.wait(2)
+    revealed_letters += letter
+    sprite.say(revealed_letters)
+    stage.wait(2)
