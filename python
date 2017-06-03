@@ -1,0 +1,26 @@
+stage.set_background("drawbridge")
+sprite = codesters.Sprite("dragon", 0, -75)
+#variables 
+#added new append variable here :
+astring = " is the best!"
+word = "python"
+secret_letters = list(word) #getter 
+sprite.say("Guess my word and you can cross!") #put this before revealed_letters variable because 
+revealed_letters = "" #just added this in the beginning needs to be a global variable. 
+#sprite interaction begins 
+
+stage.wait()
+revealed_letters += "" #moved this up from between the next two commands 
+sprite.say("After each letter you can guess! But don't take too long!")
+stage.wait()
+ #gonna catch the valuemoved from line 8 to 12
+
+for letter in secret_letters: #creating forloop 
+    sprite.say("None shall pass without the secret word.")
+    stage.wait()
+    revealed_letters += letter #added because 
+    sprite.say(revealed_letters)
+    stage.wait() 
+    secret_letters.append(astring)
+    sprite.say(revealed_letters)
+    revealed_letters += letter
